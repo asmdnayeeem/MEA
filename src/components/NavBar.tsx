@@ -19,7 +19,7 @@ export default function NavBar() {
   return (
     <>
       <div className=" w-full z-10 sticky top-[1rem] sm:top-[1.5rem] flex justify-center items-center">
-        <div className=" bg-white/50 backdrop-filter backdrop-blur-md rounded-xl h-[4rem]  lg:h-[5rem] w-[95%] items-center flex justify-between pl-[1rem] pr-[1rem] lg:pl-[5rem] lg:pr-[5rem]">
+        <div className=" bg-white/50 backdrop-filter backdrop-blur-md rounded-xl h-[4rem]  lg:h-[5rem] w-[95%] items-center flex justify-between pl-[1rem] pr-[1rem] lg:pl-[5rem] lg:pr-[5rem] ">
           <div>
             <Image src={logo} alt="" className="w-[3rem] lg:w-[4rem]" />
           </div>
@@ -46,7 +46,11 @@ export default function NavBar() {
             </Link>
             <Link href={"/Executives"}>
               {" "}
-              <li>EXECUTIVES</li>
+              <li>MEMBERS</li>
+            </Link>
+            <Link href={"/Team"}>
+              {" "}
+              <li>DEV TEAM</li>
             </Link>
           </ul>
           {/* <div> */}
@@ -112,7 +116,12 @@ export default function NavBar() {
           </li>
           <li className="side-link">
             <Link onClick={() => setIsOpen(false)} href="/Executives">
-              EXECUTIVES
+              MEMBERS
+            </Link>
+          </li>
+          <li className="side-link">
+            <Link onClick={() => setIsOpen(false)} href="/Team">
+              DEV TEAM
             </Link>
           </li>
           <Link

@@ -9,7 +9,7 @@ type eventCards = {
   time: string;
   name: string;
 }[];
-import im from "../../assets/images/Ellipse 1.png";
+import im from "../../assets/images/GC Tech Odyssey.jpg";
 
 const cards: eventCards = [
   {
@@ -18,7 +18,7 @@ const cards: eventCards = [
     venue: "KalaBharathi",
     date: "23/2/2024",
     time: "11:00AM",
-    name: "Hello",
+    name: "Rc Car Racing",
   },
   {
     image: im,
@@ -60,7 +60,9 @@ export default function Page() {
       {cards.map((card, index) => (
         <div
           key={index}
-          className={`w-[95%] md:w-[70%] p-5  flex  ${index % 2 === 1 ? "justify-end" : "justify-start"}`}
+          className={`w-[95%] md:w-[70%] p-5  flex  ${
+            index % 2 === 1 ? "justify-end" : "justify-start"
+          }`}
         >
           <EventCards {...card} index={index} />
         </div>
